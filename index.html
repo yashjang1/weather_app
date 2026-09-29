@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN for Icons -->
+
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- The main layout container -->
+  <div class="Weatherapp">
+
+    <!-- LEFT COLUMN -->
+    <div class="left-column">
+
+      <div class="middlecard" id="middlecard" style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="current-info">
+          <div id="condition-header" style="display: flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 600;">
+            <!-- Condition icon and text -->
+          </div>
+          <h1 id="current-temp" style="font-size: 90px; margin: 10px 0; color: #ffffff; font-weight: 500;">--&deg;</h1>
+          <p id="high-low-feels" style="color: #7e8ea6; font-size: 16px; font-weight: 500;">H: --&deg; &bull; L: --&deg; &bull; Feels like --&deg;</p>
+        </div>
+        <div id="small-card">
+          
+        </div>
+      </div>
+
+      <div class="topcard" id="topcard">
+      
+      <h2>TODAY'S OVERVIEW</h2>
+
+      <div style="width: 600px; height: 400px;">
+        <canvas id="myWeatherChart"></canvas>
+    </div>
+      
+      </div>
+
+      <div class="metrics-grid">
+        <!-- 1. Wind -->
+        <div class="box">
+          <div class="box-header"><i class="fa-solid fa-wind"></i> WIND</div>
+          <div class="box-value" id="wind">12 </div>
+
+
+          <div class="box-sub" id="winddirection">Direction: NW</div>
+        </div>
+
+        <!-- 2. Humidity -->
+        <div class="box">
+          <div class="box-header"><i class="fa-solid fa-droplet"></i> HUMIDITY</div>
+          <div class="box-value" id="humidityvalue">45 <span>%</span></div>
+          <div class="box-sub"></div>
+        </div>
+
+        <!-- 3. UV Index -->
+        <div class="box">
+          <div class="box-header"><i class="fa-solid fa-sun"></i> UV INDEX</div>
+          <div class="box-value" id="uvindexvalue">4</div>
+          <div class="box-sub" id="uvindexsub">Moderate</div>
+        </div>
+
+        <!-- 4. Precipitation -->
+        <div class="box">
+          <div class="box-header"><i class="fa-solid fa-cloud-rain"></i> PRECIPITATION</div>
+          <div class="box-value" id="precipvalue">10 <span>%</span></div>
+          <div class="box-sub" id="precipsub">Last 24h: 0mm</div>
+        </div>
+
+        <!-- 5. Pressure -->
+        <div class="box">
+          <div class="box-header"><i class="fa-solid fa-gauge"></i> PRESSURE</div>
+          <div class="box-value" id="pressurevalue">1012 <span>mb</span></div>
+          <div class="box-sub" id="pressuresub"></div>
+        </div>
+
+        <!-- 6. Visibility -->
+        <div class="box">
+          <div class="box-header"><i class="fa-solid fa-eye"></i> VISIBILITY</div>
+          <div class="box-value" id="Visibilityvalue">10 <span>km</span></div>
+          <div class="box-sub" id="Visibilitysub">Perfectly clear</div>
+        </div>
+
+        <!-- 7. Air Quality -->
+        <div class="box">
+          <div class="box-header"><i class="fa-solid fa-leaf"></i> AIR QUALITY</div>
+          <div class="box-value">32</div>
+          <div class="box-sub">Good</div>
+        </div>
+
+        <!-- 8. Sunrise & Sunset -->
+        <div class="box">
+          <div class="box-header"><i class="fa-solid fa-cloud-sun"></i> SUNRISE & SUNSET</div>
+          <div class="box-value sun-times"><span>6:42 AM</span><span>6:24 PM</span></div>
+          <div class="box-sub sun-sub"><span>Dawn</span><span>Dusk</span></div>
+        </div>
+      </div>
+    </div> <!-- End of Left Column -->
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-column">
+      <div id="daysreport">
+        <h2>7-DAY FORECAST</h2>
+      </div>
+    </div>
+
+  </div> <!-- End of Weatherapp -->
+  <script src="app.js"></script>
+</body>
+
+</html>

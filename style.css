@@ -1,0 +1,129 @@
+body {
+  background-color: #0b131e;
+  color: #ffffff; /* Make text readable */
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* 2-Column Layout Container */
+.Weatherapp {
+  display: flex;
+  gap: 20px; /* Space between left column and right column */
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the whole app on the screen */
+}
+
+/* Left Side (70% width) */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Vertical space between topcard, middlecard, and grid */
+  width: 70%;
+}
+
+/* Right Side (30% width) */
+.right-column {
+  width: 30%;
+}
+
+/* Shared Card Styles */
+.topcard, .middlecard {
+  background-color: #172033;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.topcard {
+  min-height: 300px;
+}
+
+.middlecard {
+  min-height: 190px;
+}
+
+/* Grid layout for the 8 boxes */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 16px;
+}
+
+.box {
+  background-color: #172033; /* Dark card color */
+  padding: 20px;
+  border-radius: 20px;
+  
+  /* Use Flexbox inside each box to arrange text neatly */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  min-height: 140px;
+}
+
+.box-header {
+  font-size: 11px;
+  font-weight: 700;
+  color: #7e8ea6;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between the icon and the text */
+}
+
+.box-header i {
+  font-size: 14px;
+}
+
+.box-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+.box-value span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #7e8ea6;
+}
+
+.box-sub {
+  font-size: 12px;
+  color: #7e8ea6;
+}
+
+/* Specific styling to space out Sunrise and Sunset times perfectly */
+.box-value.sun-times, .box-sub.sun-sub {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-value.sun-times span {
+  font-size: 18px; /* Slightly smaller text so both times fit */
+  color: #ffffff;
+}
+
+
+#daysreport {
+  background-color: #172033;
+  border-radius: 20px;
+  padding: 20px;
+  height: 100%; /* Stretches to fill the right column vertically */
+}
+
+
+#small-card {
+  padding: 20px;
+  background-color: #202b3b; 
+  border: none; 
+  border-radius: 40px; 
+  height: 180px; /* Made slightly taller to fit your 170px image + text */
+  width: 200px;
+  margin-left: auto; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
